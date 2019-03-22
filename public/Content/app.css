@@ -1,0 +1,15 @@
+/*
+App Style Sheet
+Name - Shiv Rana
+Student Id - 300990505
+Date - Feb-16-2019
+*/
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}

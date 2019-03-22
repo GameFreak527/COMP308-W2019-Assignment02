@@ -1,0 +1,142 @@
+<% include ./partials/header.ejs %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Welcome to Shiv's Portfolio</h1>
+    <br />
+    <h2>The portfolio contains five sections</h2>
+    <br />
+
+    <p>
+      <a
+        class="btn btn-primary"
+        data-toggle="collapse"
+        href="#homeDetails"
+        role="button"
+        aria-expanded="false"
+        aria-controls="homeDetails"
+        ><i class="fas fa-home"></i> Home Page</a
+      >
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#aboutDetail"
+        aria-expanded="false"
+        aria-controls="aboutDetail"
+      ><i class="fas fa-book-reader"></i> 
+        About Me
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#projectsDetail"
+        aria-expanded="false"
+        aria-controls="projectsDetail"
+      ><i class="fas fa-code"></i>
+        Projects
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#servicesDetail"
+        aria-expanded="false"
+        aria-controls="servicesDetail"
+      ><i class="fas fa-award"></i> 
+        Services
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target="#contactDetails"
+        aria-expanded="false"
+        aria-controls="contactDetails"
+      ><i class="far fa-comment-alt"></i> 
+        Contact
+      </button>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-toggle="collapse"
+        data-target=".multi-collapse"
+        aria-expanded="false"
+        aria-controls="homeDetails aboutDetail projectsDetail servicesDetail contactDetails"
+      ><i class="fas fa-globe"></i> 
+        View All
+      </button>
+    </p>
+
+    <!--All the content of those page-->
+
+    <div class="row">
+      <div class="col">
+        <div class="collapse multi-collapse" id="homeDetails">
+          <div class="card card-body">
+            <b
+              >The Current page is the homepage and as you can see you can
+              navigate through this portfolio using the navigation bar on the
+              top or you can click on the tabs on the right and check the
+              details.</b
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="aboutDetail">
+          <div class="card card-body">
+            <b
+              >This section will show you the information about me,<br />
+              you can click on the below button to redirect you to that page</b
+            ><br />
+            <a class="btn btn-primary" href="/about" role="button">About Me</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="projectsDetail">
+          <div class="card card-body">
+            <b
+              >If you want to check the details about the projects that i made
+              through out my career,<br />
+              you can click on the below button to redirect you to that page</b
+            ><br />
+            <a class="btn btn-primary" href="/projects" role="button"
+              >Projects</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="servicesDetail">
+          <div class="card card-body">
+            <b>
+              If you want to check the technologies that i learned through out
+              my life experiance and my technical skills then,<br />
+              you can click on the below button to redirect you to that page</b
+            ><br />
+            <a class="btn btn-primary" href="/services" role="button"
+              >Services</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="contactDetails">
+          <div class="card card-body">
+            <b
+              >If you want to contact me then you can fill the form on the
+              contact page and i will contact you shortly,<br />
+              you can click on the below button to redirect you to that page</b
+            ><br />
+            <a class="btn btn-primary" href="/contact" role="button"
+              >Contacts</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ./partials/footer.ejs %>

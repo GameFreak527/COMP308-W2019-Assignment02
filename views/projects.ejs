@@ -1,0 +1,179 @@
+<% include ./partials/header.ejs %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><% title %></h1>
+    <!--Showing the images-->
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner" data-interval="1000">
+        <div class="carousel-item active">
+          <img
+            src="Assets/GUI1.png"
+            class="d-block w-100"
+            alt="Payroll Management System"
+          />
+        </div>
+        <div class="carousel-item" data-interval="1000">
+          <img
+            src="Assets/GUI2.jpg"
+            class="d-block w-100"
+            alt="Hospital Management System"
+          />
+        </div>
+        <div class="carousel-item" data-interval="1000">
+          <img
+            src="Assets/GUI3.jpg"
+            class="d-block w-100"
+            alt="Soccer League"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!--Adding the description of the Projects-->
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Payroll Management System
+            </button>
+          </h2>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse show"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <b><label>Description</label></b>
+            <br />
+            <p>
+              Payroll Management System is the system that i created with the
+              team of full 6 members of team in 4 months time period. We created
+              this application as a standalone application which is designed in
+              C# and the back end of the database is structured by the SQL
+              database. It has three users for now but depends upon the
+              usuability the user canc change that to the way he/she likes to
+              change
+            </p>
+            <b><label>Role</label></b>
+            <br />
+            <p>
+              My role in the team was as a full stack developer, i had to make
+              sure that i do my work before the deadline and meet the goals that
+              we decided in each of the sprints.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Hospital Management System
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <b><label>Description</label></b>
+            <br />
+            <p>
+              Hospital management system is the ongoing project that we started
+              in january 2019 during my last semseter.This is the stand alone
+              software that should be developed in the point of view that only
+              be used in the hospitals but can be applicable in any hospitals,
+              the front end is done by using the C# as my first project and the
+              User Interface is designed using the forms from the Visual Studio
+              platform which grants easy and felxible user interface. Further
+              more, the backend that is databse will be Sql which will hold all
+              the data.
+            </p>
+            <b><label>Role</label></b>
+            <br />
+            <p>
+              For this project, i choose to be the Product Owner since i was the
+              one to decide to work on this project and proposed this project to
+              my team mates, I will be deciding the work we as a team to do each
+              sprint and mae sure that the core functionality of the software is
+              first to fulfill.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Third Div-->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button
+              class="btn btn-link collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Soccer League
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <b><label>Description</label></b>
+            <br />
+            <p>
+              Soccer League is the website that i designed that helps the coach
+              to add his/her team into the system and schedule the matches. The
+              website provides full access over the CRUD (Create, Reterive,
+              Update and Delete) of coach, teams, players and the match
+              schedules. The website is designed with C# in Visual Studio
+              platform and all the information is stored into the SQL server
+              that can be further portabe to the cloud services if there is a
+              need for the extension of the website over the internet with high
+              level of the users.
+            </p>
+            <b><label>Role</label></b>
+            <br />
+            <p>
+              I created this project on my own without any external help of any
+              class mate so all the work of development, documentation and
+              planning is done by me, it took alot of time but it all worth the
+              end result.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ./partials/footer.ejs %>
