@@ -1,6 +1,7 @@
 let express = require("express");
-let router = express.Router();
-let jwt = require("jsonwebtoken");
+// let router = express.Router();
+// let jwt = require("jsonwebtoken");
+// Maybe i have  to delete all above one because we are not using it
 
 // create a reference to the db schema
 let contactModel = require("../models/contact");

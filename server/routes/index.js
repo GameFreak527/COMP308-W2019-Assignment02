@@ -8,32 +8,15 @@ Date - Feb-16-2019
 let express = require("express");
 let router = express.Router();
 
-/* GET home page. */
+let indexController = require("../controllers/index");
 
-/*
-router.get("/", function(req, res, next) {
-  res.render("index", { title: "Home" });
-});
+/* POST - processes the Login Page */
+router.post("/login", indexController.processLoginPage);
 
-// GET about page. 
-router.get("/about", function(req, res, next) {
-  res.render("about", { title: "About" });
-});
+/* POST - processes the User Registration Page */
+router.post("/register", indexController.processRegisterPage);
 
-/* GET contact page. 
-// router.get("/contact", function(req, res, next) {
-//   res.render("contact", { title: "Contacts" });
-// });
+/* GET - perform user logout */
+router.get("/logout", indexController.performLogout);
 
-// GET projects page. 
-router.get("/projects", function(req, res, next) {
-  res.render("projects", { title: "Projects" });
-});
-
-// GET services page. 
-router.get("/services", function(req, res, next) {
-  res.render("services", { title: "Services" });
-});
-
-*/
 module.exports = router;

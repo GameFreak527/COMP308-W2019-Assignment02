@@ -22,4 +22,7 @@ router.get("/delete/:id", contactController.performDelete);
 /* POST request - Update the database with data from the Edit Page */
 router.post("/edit/:id", contactController.processEditPage);
 
+/* GET Request - Display edit page with default values into it */
+router.get("/edit/:id", contactController.displayEditPage);
+
 module.exports = router;
