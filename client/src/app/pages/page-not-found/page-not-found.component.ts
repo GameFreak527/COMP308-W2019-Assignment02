@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-not-found.component.css']
 })
 export class PageNotFoundComponent implements OnInit {
-
-  constructor() { }
+  title : String;
+  constructor() {
+  }
 
   ngOnInit() {
+    this.title = "Page Not Found";
   }
 
 }

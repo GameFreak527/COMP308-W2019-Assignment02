@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-
-  constructor() { }
+  title : String;
+  constructor() {
+  }
 
   ngOnInit() {
+    this.title = "Services";
   }
 
 }

@@ -8,6 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 
 //Adding all the routes
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent, data: { title: "Contact" } },
   { path: "projects", component: ProjectsComponent, data: { title: "Projects" } },
   { path: "services", component: ServicesComponent, data: { title: "Services" } },
+
+  // Contact Routes
+  { path: "contact/contact-list", component: ContactListComponent, data: { title: "Contact List" } },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
