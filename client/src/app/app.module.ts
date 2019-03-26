@@ -9,7 +9,8 @@ import { ContactComponent } from "./pages/contact/contact.component";
 import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
 import { ProjectsComponent } from "./pages/projects/projects.component";
 import { ServicesComponent } from "./pages/services/services.component";
-import { HeaderComponent } from './pages/partials/header/header.component';
+import { HeaderComponent } from "./pages/partials/header/header.component";
+import { MasterPageComponent } from "./pages/partials/master-page/master-page.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './pages/partials/header/header.component';
     PageNotFoundComponent,
     ProjectsComponent,
     ServicesComponent,
-    HeaderComponent
+    HeaderComponent,
+    MasterPageComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
