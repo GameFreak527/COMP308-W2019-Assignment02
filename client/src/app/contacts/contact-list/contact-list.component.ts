@@ -27,7 +27,6 @@ export class ContactListComponent implements OnInit {
     this.contactListService.getList().subscribe(data=>{
       if(data.success){
         this.contacts = data.contactList;
-        console.log(data.contactList);
         
       }
       else{

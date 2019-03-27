@@ -9,6 +9,10 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
+import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
+import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 //Adding all the routes
 const routes: Routes = [
@@ -20,6 +24,15 @@ const routes: Routes = [
 
   // Contact Routes
   { path: "contact/contact-list", component: ContactListComponent, data: { title: "Contact List" } },
+  { path: "contact/contact-list/add", component: ContactDetailsComponent, data: { title: "Add Contact" } },
+  { path: "contact/contact-list/edit/:id", component: ContactDetailsComponent, data: { title: "Update Contact" } },
+  { path: "contact/contact-list/delete/:id", component: ContactDeleteComponent, data: { title: "Delete Contact" } },
+
+  //User Routes
+  { path: "login", component: LoginComponent, data: { title: "Login" } },
+  { path: "logout", redirectTo: '/login', pathMatch: 'full' },
+  { path: "register", component: RegisterComponent, data: { title: "Register User" } },
+
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
