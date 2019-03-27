@@ -17,7 +17,7 @@ router.get("/", contactController.displayContactList);
 router.post("/add", contactController.processAddPage);
 
 /* GET request to perform the delete action */
-router.get("/delete/:id", contactController.performDelete);
+router.post("/delete/:id", contactController.performDelete);
 
 /* POST request - Update the database with data from the Edit Page */
 router.post("/edit/:id", contactController.processEditPage);
