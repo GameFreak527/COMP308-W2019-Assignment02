@@ -24,6 +24,9 @@ import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messag
 import { AuthService } from './services/auth.service';
 import { JwtModule, JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
 
+//Guards
+import { AuthGuard } from './guards/auth.guard';
+
 
 //To get token
 export function jwtTokenGetter() {
@@ -51,7 +54,7 @@ export function jwtTokenGetter() {
       tokenGetter: jwtTokenGetter
     }
   })],
-  providers: [FlashMessagesService],
+  providers: [FlashMessagesService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

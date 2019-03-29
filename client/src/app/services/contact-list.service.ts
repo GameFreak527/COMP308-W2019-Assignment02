@@ -10,6 +10,8 @@ import { User } from '../models/user';
 export class ContactListService {
   private user : User;
   private contact : Contact;
+  private authToken: any = null;
+
   private endpoint = 'http://localhost:3000/api/contact/';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -23,22 +25,35 @@ export class ContactListService {
   constructor(private http: HttpClient) { }
 
   public getList(): Observable<any> {
+    this.loadToken();
     return this.http.get<any>(this.endpoint, this.httpOptions);
   }
 
   public addContact(contact: Contact):Observable<any>{
+    this.loadToken();
     return this.http.post<any>(this.endpoint+'add',contact,this.httpOptions);
   }
 
   public editContact(contact:Contact):Observable<any>{
+    this.loadToken();
     return this.http.post<any>(this.endpoint +'edit/' + contact._id,contact,this.httpOptions);
   }
 
   public deleteContact(contact:Contact):Observable<any>{
+    this.loadToken();
     return this.http.post<any>(this.endpoint +'delete/' + contact._id,contact,this.httpOptions);
   }
 
   public getContact(contact:Contact):Observable<any>{
+    this.loadToken();
     return this.http.get<any>(this.endpoint +'edit/' + contact._id,this.httpOptions);
   }
+
+  //Sends the token into the header to confirm the identity of user
+  private loadToken() {
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
+    this.httpOptions.headers = this.httpOptions.headers.set('Authorization', this.authToken);
+  }
+
 }

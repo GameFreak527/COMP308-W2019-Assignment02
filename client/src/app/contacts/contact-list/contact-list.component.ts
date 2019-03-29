@@ -36,6 +36,7 @@ export class ContactListComponent implements OnInit {
     });
   }
 
+  //Provides a dialog box and ask if really want to delete
   private onDeleteClick(): void {
     if(!confirm('Are You Sure want to delete?')) {
       this.router.navigate(['/contact/contact-list']);

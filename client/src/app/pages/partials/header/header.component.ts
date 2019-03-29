@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn(): boolean {
     const result = this.authService.loggedIn();
+    //If logged in then only put user details in user object
     if(result) {
       this.user = JSON.parse(localStorage.getItem('user'));
     }

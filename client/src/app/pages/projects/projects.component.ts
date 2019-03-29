@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
   title : String;
-  constructor() {
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) {
   }
 
   ngOnInit() {
-    this.title = "Projects";
+    this.title = this.title = this.activatedRoute.snapshot.data.title;
+
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: "app-contact",
@@ -7,10 +9,18 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ContactComponent implements OnInit {
   title : String;
-  constructor() {
+  constructor(
+    private authService : AuthService,
+    private activatedRoute: ActivatedRoute
+  ) {
   }
 
   ngOnInit() {
-    this.title = "Contact";
+    this.title = this.title = this.activatedRoute.snapshot.data.title;
+
+  }
+
+  isLoggedIn():boolean{
+    return this.authService.loggedIn();
   }
 }
