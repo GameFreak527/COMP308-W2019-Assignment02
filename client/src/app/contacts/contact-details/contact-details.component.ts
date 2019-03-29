@@ -42,7 +42,7 @@ export class ContactDetailsComponent implements OnInit {
     })
   }
 
-  private onContactDetailsSubmit():void{
+  public onContactDetailsSubmit():void{
     switch(this.title){
       case 'Add Contact':{
         this.contactListService.addContact(this.contact).subscribe(data => {

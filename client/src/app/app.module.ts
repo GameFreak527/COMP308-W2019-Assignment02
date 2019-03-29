@@ -15,13 +15,20 @@ import { ServicesComponent } from "./pages/services/services.component";
 import { HeaderComponent } from "./pages/partials/header/header.component";
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
-
-// Services
-import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
 import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 
+// Services
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
+import { AuthService } from './services/auth.service';
+import { JwtModule, JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
+
+
+//To get token
+export function jwtTokenGetter() {
+  return localStorage.getItem('id_token');
+}
 
 @NgModule({
   declarations: [
@@ -39,7 +46,11 @@ import { LoginComponent } from './pages/login/login.component';
     RegisterComponent,
     LoginComponent
   ],
-  imports: [BrowserModule, AppRoutingModule,FormsModule,HttpClientModule,FlashMessagesModule],
+  imports: [BrowserModule, AppRoutingModule,FormsModule,HttpClientModule,FlashMessagesModule,JwtModule.forRoot({
+    config: {
+      tokenGetter: jwtTokenGetter
+    }
+  })],
   providers: [FlashMessagesService],
   bootstrap: [AppComponent]
 })
