@@ -20,7 +20,8 @@ export class ContactListService {
   private contact : Contact;
   private authToken: any = null;
 
-  private endpoint = 'http://localhost:3000/api/contact/';
+  private endpoint = 'https://carrerportfolio2.herokuapp.com/api/contact/';
+  //private endpoint = 'http://localhost:3000/api/contact/';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
