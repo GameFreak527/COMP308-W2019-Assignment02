@@ -1,3 +1,10 @@
+/*
+Module Class(Main Class)
+Name - Shiv Rana
+Student Id - 300990505
+Date - Mar-30-2019
+*/
+
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";

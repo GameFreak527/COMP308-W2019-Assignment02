@@ -1,3 +1,11 @@
+/*
+Register Code Behind File
+Name - Shiv Rana
+Student Id - 300990505
+Date - Mar-30-2019
+*/
+
+
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from 'src/app/services/auth.service';

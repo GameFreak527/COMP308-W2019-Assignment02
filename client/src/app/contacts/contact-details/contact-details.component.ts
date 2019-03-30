@@ -1,3 +1,10 @@
+/*
+Contact Details Class(Insert and Update)
+Name - Shiv Rana
+Student Id - 300990505
+Date - Mar-30-2019
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { ContactListService } from 'src/app/services/contact-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';

@@ -1,3 +1,9 @@
+/*
+User Model Class
+Name - Shiv Rana
+Student Id - 300990505
+Date - Mar-30-2019
+*/
 // require modules for our User Model
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");
